@@ -19,20 +19,20 @@ var drawNewGrid = function() {
 	$('body').append('<div class=\'grid\'></div>');
 
 	var numberOfBlocks = prompt("Broj blokova u redu (preporučeno 25):");
-	var size = prompt("Veličina jednog bloka (u pikselima) (preporučen odnos 1:1.2, npr 25 i 30):");
+	var size = prompt("Veličina jednog bloka (u pikselima):");
 
 	createGrid(parseInt(numberOfBlocks), parseInt(size));
 }
 
 $(document).ready(function() {
-	createGrid(25, 30);
+	createGrid(30, 20);	// početna veličina
 
 	$('#buttonClear').click(function() {
 		$('.square').css('background', '#616161');
 	});
 
 	$('#buttonTrail').click(function() {
-		//$('.square').css('background', '#616161');
+		//$('.square').css('background', '#616161'); // ako hoću nakon traila da clearam cijeli board, ovo odkomentirati
 		trail = !trail;
 	});
 
